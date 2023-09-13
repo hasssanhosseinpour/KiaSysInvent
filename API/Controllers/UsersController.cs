@@ -4,13 +4,12 @@ using API.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 
 namespace API.Controllers
 {
-//     [ApiController]
-//     [Route("api/[controller]")]  // localhost/api/users
-     [Authorize]
+    //     [ApiController]
+    //     [Route("api/[controller]")]  // localhost/api/users
+    [Authorize]
     public class UsersController : BaseApiController
     {   
        //ctor + tab

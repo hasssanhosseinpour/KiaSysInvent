@@ -1,0 +1,22 @@
+[
+    {
+       "Name":"Supplier A",
+       "ContactName":"Contact A",
+       "Phone":"6040000000",
+       "Email":"sjdhuweja@gmail.com",
+       "Address":"waewda waewd ",
+       "CreatedDate":"0001-01-01T00:00:00",
+       "CreatedUserId":0,
+       "IsActive":true
+    },
+    {
+       "Name":"Supplier B",
+       "ContactName":"Contact B",
+       "Phone":"7800000000",
+       "Email":"dddfkjug@yahoo.com",
+       "Address":"101 4060 Robson Burnaby",
+       "CreatedDate":"2023-09-12T00:00:00",
+       "CreatedUserId":0,
+       "IsActive":true
+    }
+ ]

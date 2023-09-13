@@ -1,0 +1,48 @@
+[
+    {
+      "Name": "Main Courses",
+      "BusinessType": "Food",
+      "CreatedDate": "2019-04-24",
+      "CreatedUserId": 5,
+      "IsActive": true,
+      "UpdatedDate": "2019-07-16",
+      "UpdatedUserId": 5
+    },
+    {
+      "Name": "Beverages",
+      "BusinessType": "Food",
+      "CreatedDate": "2019-11-21",
+      "CreatedUserId": 2,
+      "IsActive": true,
+      "UpdatedDate": "2020-01-18",
+      "UpdatedUserId": 2
+    },
+    {
+      "Name": "Appetizers",
+      "BusinessType": "Food",
+      "CreatedDate": "2019-03-30",
+      "CreatedUserId": 5,
+      "IsActive": true,
+      "UpdatedDate": "2020-04-07",
+      "UpdatedUserId": 4
+    },
+    {
+      "Name": "Desserts",
+      "BusinessType": "Food",
+      "CreatedDate": "2019-12-18",
+      "CreatedUserId": 5,
+      "IsActive": true,
+      "UpdatedDate": "2019-01-09",
+      "UpdatedUserId": 2
+    }
+    ,
+    {
+      "Name": "Components",
+      "BusinessType": "Food",
+      "CreatedDate": "2019-12-18",
+      "CreatedUserId": 3,
+      "IsActive": true,
+      "UpdatedDate": "2019-01-09",
+      "UpdatedUserId": 1
+    }
+  ]

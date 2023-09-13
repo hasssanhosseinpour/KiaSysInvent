@@ -1,0 +1,343 @@
+[
+    {
+       "Name":"Chicken Club",
+       "Description":"Chicken Club Special",
+       "UnitPrice":25.00,
+       "QuantityInStock":0,
+       "SupplierId":1,
+       "CreatedDate":"2020-02-28T00:00:00",
+       "CreatedUserId":2,
+       "IsActive":true,
+       "UpdatedDate":"2020-02-29T00:00:00",
+       "UpdatedUserId":5,
+       "IsComponent":false,
+       "ItemCategoryId":1,
+       "UnitOfMeasureId":1,
+       "Photos": [
+           {
+               "Url": "C:\\KiaSysInvent\\API\\Data\\Photos\\Food\\Pizza\\pizza1.jpg",
+               "IsMain": true
+           }
+       ]
+    },
+    {
+       "Name":"Peperoni",
+       "Description":"",
+       "UnitPrice":24.00,
+       "QuantityInStock":0,
+       "SupplierId":2,
+       "CreatedDate":"2019-06-04T00:00:00",
+       "CreatedUserId":3,
+       "IsActive":true,
+       "UpdatedDate":"2019-06-05T00:00:00",
+       "UpdatedUserId":5,
+       "IsComponent":false,
+       "ItemCategoryId":1,
+       "UnitOfMeasureId":1,
+       "Photos": [
+           {
+               "Url": "C:\\KiaSysInvent\\API\\Data\\Photos\\Food\\Pizza\\pizza2.jpg",
+               "IsMain": true
+           }
+       ]
+    },
+    {
+       "Name":"BBQ Chicken and Beef",
+       "Description":"BBQ Chicken and Beef Combination ",
+       "UnitPrice":25.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2020-05-18T00:00:00",
+       "CreatedUserId":4,
+       "IsActive":true,
+       "UpdatedDate":"2020-05-19T00:00:00",
+       "UpdatedUserId":4,
+       "IsComponent":false,
+       "ItemCategoryId":1,
+       "UnitOfMeasureId":1,
+       "Photos": [
+           {
+               "Url": "C:\\KiaSysInvent\\API\\Data\\Photos\\Food\\Pizza\\pizza3.jpg",
+               "IsMain": true
+           }
+       ]
+    },
+    {
+       "Name":"Meat Lovers",
+       "Description":"",
+       "UnitPrice":26.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-12-07T00:00:00",
+       "CreatedUserId":4,
+       "IsActive":true,
+       "UpdatedDate":"2019-12-08T00:00:00",
+       "UpdatedUserId":5,
+       "IsComponent":false,
+       "ItemCategoryId":1,
+       "UnitOfMeasureId":1,
+       "Photos": [
+           {
+               "Url": "C:\\KiaSysInvent\\API\\Data\\Photos\\Food\\Pizza\\pizza4.jpg",
+               "IsMain": true
+           }
+       ]
+    },
+    {
+       "Name":"Blue Cheez and Beef",
+       "Description":"Chicken Club Special",
+       "UnitPrice":28.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":false,
+       "ItemCategoryId":1,
+       "UnitOfMeasureId":1,
+       "Photos": [
+           {
+               "Url": "C:\\KiaSysInvent\\API\\Data\\Photos\\Food\\Pizza\\pizza5.jpg",
+               "IsMain": true
+           }
+       ]
+    },
+    {
+       "Name":"All-purpose flour",
+       "Description":"All-purpose flour",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Active dry yeast",
+       "Description":"Active dry yeast",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Olive oil ",
+       "Description":"Olive oil ",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Sugar",
+       "Description":"Sugar",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Salt",
+       "Description":"Salt",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Tomato sauce",
+       "Description":"Tomato sauce",
+       "UnitPrice":24.00,
+       "QuantityInStock":0,
+       "SupplierId":2,
+       "CreatedDate":"2019-06-04T00:00:00",
+       "CreatedUserId":3,
+       "IsActive":true,
+       "UpdatedDate":"2019-06-05T00:00:00",
+       "UpdatedUserId":5,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"pizza sauce",
+       "Description":"pizza sauce",
+       "UnitPrice":25.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2020-05-18T00:00:00",
+       "CreatedUserId":4,
+       "IsActive":true,
+       "UpdatedDate":"2020-05-19T00:00:00",
+       "UpdatedUserId":4,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Mozzarella cheese",
+       "Description":"Mozzarella cheese",
+       "UnitPrice":26.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-12-07T00:00:00",
+       "CreatedUserId":4,
+       "IsActive":true,
+       "UpdatedDate":"2019-12-08T00:00:00",
+       "UpdatedUserId":5,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"chicken breast",
+       "Description":"Grilled or cooked chicken breast, sliced",
+       "UnitPrice":28.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Bacon strips",
+       "Description":"Bacon strips, cooked and crumbled",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Sliced tomatoes",
+       "Description":"Sliced tomatoes",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Sliced red onions",
+       "Description":"Sliced red onions",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Fresh lettuce",
+       "Description":"Fresh lettuce",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Mixed greens",
+       "Description":"Mixed greens",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Ranch dressing",
+       "Description":"Ranch dressing",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"mayonnaise-based sauce",
+       "Description":"mayonnaise-based sauce",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    },
+    {
+       "Name":"Parmesan cheese",
+       "Description":"Parmesan cheese",
+       "UnitPrice":16.00,
+       "QuantityInStock":0,
+       "CreatedDate":"2019-01-19T00:00:00",
+       "CreatedUserId":1,
+       "IsActive":true,
+       "UpdatedDate":"2019-01-20T00:00:00",
+       "UpdatedUserId":2,
+       "IsComponent":true,
+       "ItemCategoryId":5,
+       "UnitOfMeasureId":2
+    }
+ ]

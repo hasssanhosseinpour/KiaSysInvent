@@ -26,6 +26,13 @@ namespace API.Controllers
             if(await UserExists(registerDto.Username))
                 return BadRequest("Username is taken");
 
+            // if (string.IsNullOrEmpty(registerDto.Username)) return BadRequest("UsernameEmpty");
+
+            // if (string.IsNullOrEmpty(registerDto.Password)) return BadRequest("PasswordEmpty");
+
+            // if (registerDto.Password.Length < 4 || registerDto.Password.Length > 8) 
+            //     return BadRequest("PasswordRule");
+
             using var hmac = new HMACSHA512();
 
             var user = new AppUser

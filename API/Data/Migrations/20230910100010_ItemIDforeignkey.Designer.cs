@@ -4,6 +4,7 @@ using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230910100010_ItemIDforeignkey")]
+    partial class ItemIDforeignkey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,14 +33,8 @@ namespace API.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("CreatedUserId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
 
                     b.Property<byte[]>("PasswordHash")
                         .HasColumnType("varbinary(max)");
@@ -45,11 +42,8 @@ namespace API.Data.Migrations
                     b.Property<byte[]>("PasswordSalt")
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<DateTime?>("UpdatedDate")
+                    b.Property<DateTime>("Updated")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("UpdatedUserId")
-                        .HasColumnType("int");
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
@@ -67,19 +61,19 @@ namespace API.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ChildItemId")
+                    b.Property<int>("ChildItemID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ItemId")
+                    b.Property<int>("ItemID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Quantity")
@@ -88,12 +82,12 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ItemId");
+                    b.HasIndex("ItemID");
 
                     b.ToTable("BOMs");
                 });
@@ -112,7 +106,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -139,7 +133,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -158,13 +152,13 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ItemId")
+                    b.Property<int>("ItemID")
                         .HasColumnType("int");
 
                     b.Property<int>("QuantityChange")
@@ -181,12 +175,12 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ItemId");
+                    b.HasIndex("ItemID");
 
                     b.ToTable("InventoryTransactions");
                 });
@@ -199,10 +193,15 @@ namespace API.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -210,12 +209,6 @@ namespace API.Data.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<bool>("IsComponent")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ItemCategoryId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -228,10 +221,7 @@ namespace API.Data.Migrations
                     b.Property<int?>("ReorderLevel")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SupplierId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UnitOfMeasureId")
+                    b.Property<int?>("SupplierID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("UnitPrice")
@@ -240,52 +230,14 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ItemCategoryId");
-
-                    b.HasIndex("SupplierId");
-
-                    b.HasIndex("UnitOfMeasureId");
+                    b.HasIndex("SupplierID");
 
                     b.ToTable("Items");
-                });
-
-            modelBuilder.Entity("API.Entities.ItemCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("BusinessType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CreatedUserId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int?>("UpdatedUserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ItemCategories");
                 });
 
             modelBuilder.Entity("API.Entities.Order", b =>
@@ -299,7 +251,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<int?>("CustomerID")
@@ -317,7 +269,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -338,16 +290,16 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ItemId")
+                    b.Property<int>("ItemID")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrderId")
+                    b.Property<int>("OrderID")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -356,43 +308,16 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ItemId");
+                    b.HasIndex("ItemID");
 
-                    b.HasIndex("OrderId");
+                    b.HasIndex("OrderID");
 
                     b.ToTable("OrderItems");
-                });
-
-            modelBuilder.Entity("API.Entities.Photo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("IsMain")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ItemId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PublicId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Url")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ItemId");
-
-                    b.ToTable("Photos");
                 });
 
             modelBuilder.Entity("API.Entities.Supplier", b =>
@@ -413,7 +338,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -435,7 +360,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -454,7 +379,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("CreatedUserId")
+                    b.Property<int>("CreatedUserID")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
@@ -468,7 +393,7 @@ namespace API.Data.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("UpdatedUserId")
+                    b.Property<int?>("UpdatedUserID")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -480,7 +405,7 @@ namespace API.Data.Migrations
                 {
                     b.HasOne("API.Entities.Item", "Item")
                         .WithMany()
-                        .HasForeignKey("ItemId")
+                        .HasForeignKey("ItemID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -491,7 +416,7 @@ namespace API.Data.Migrations
                 {
                     b.HasOne("API.Entities.Item", "Item")
                         .WithMany()
-                        .HasForeignKey("ItemId")
+                        .HasForeignKey("ItemID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -500,27 +425,11 @@ namespace API.Data.Migrations
 
             modelBuilder.Entity("API.Entities.Item", b =>
                 {
-                    b.HasOne("API.Entities.ItemCategory", "ItemCategories")
-                        .WithMany()
-                        .HasForeignKey("ItemCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("API.Entities.Supplier", "Supplier")
                         .WithMany()
-                        .HasForeignKey("SupplierId");
-
-                    b.HasOne("API.Entities.UnitOfMeasure", "UnitOfMeasures")
-                        .WithMany()
-                        .HasForeignKey("UnitOfMeasureId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ItemCategories");
+                        .HasForeignKey("SupplierID");
 
                     b.Navigation("Supplier");
-
-                    b.Navigation("UnitOfMeasures");
                 });
 
             modelBuilder.Entity("API.Entities.Order", b =>
@@ -536,35 +445,19 @@ namespace API.Data.Migrations
                 {
                     b.HasOne("API.Entities.Item", "Item")
                         .WithMany()
-                        .HasForeignKey("ItemId")
+                        .HasForeignKey("ItemID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("API.Entities.Order", "Order")
                         .WithMany()
-                        .HasForeignKey("OrderId")
+                        .HasForeignKey("OrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Item");
 
                     b.Navigation("Order");
-                });
-
-            modelBuilder.Entity("API.Entities.Photo", b =>
-                {
-                    b.HasOne("API.Entities.Item", "Item")
-                        .WithMany("Photos")
-                        .HasForeignKey("ItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Item");
-                });
-
-            modelBuilder.Entity("API.Entities.Item", b =>
-                {
-                    b.Navigation("Photos");
                 });
 #pragma warning restore 612, 618
         }
